@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Star Rater</title>
+    <style>
+      .stars ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .star {
+        font-size: 2em;
+        color: #ddd;
+        display: inline-block;
+      }
+      .orange {
+        color: orange;
+      }
+      .output {
+        background-color: #ddd;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="stars">
+      <li class="star">&#10029;</li>
+      <li class="star">&#10029;</li>
+      <li class="star">&#10029;</li>
+      <li class="star">&#10029;</li>
+      <li class="star">&#10029;</li>
+    </ul>
+    <div class="output"></div>
+    <script>
+     
+const stars = document.querySelectorAll('.stars li');
+const output = document.querySelector('.output');
+
+
+const starArr = Array.from(stars);
+
+
+starArr.forEach((star, index) => {
+  star.starValue = index + 1;
+  star.addEventListener('click', starRate);
+});
+
+
+function starRate(event) {
+  const clickedStar = event.target;
+  const starValue = clickedStar.starValue;
+  output.textContent = `You rated this ${starValue} stars.`;
+  
+  starArr.forEach((star, index) => {
+    if (index < starValue) {
+      star.classList.add('orange');
+    } else {
+      star.classList.remove('orange');
+    }
+  });
+}
+
+    </script>
+  </body>
+</html>

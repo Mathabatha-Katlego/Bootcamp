@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+	<style>
+		.red {
+			color: red;
+		}
+	</style>
+	<script>
+		window.onload = function() { // Wait for the page to load before executing JavaScript
+			const output = document.querySelector('.output'); // Select the output element
+			output.textContent = document.URL; // Update the textContent property of the selected page element with the document URL
+			output.classList.add('red'); // Add a class of red to the element using the classList.add method
+			output.id = 'tester'; // Update the id property of the element to tester
+			output.style.backgroundColor = 'red'; // Add a backgroundColor property of red to the page element using the style object
+		};
+	</script>
+</head>
+<body>
+	<div class="output"></div>
+</body>
+</html>

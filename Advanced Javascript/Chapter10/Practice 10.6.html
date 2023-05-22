@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elements with Same Class</title>
+  </head>
+  <body>
+    <div class="myElement">Element 1</div>
+    <p class="myElement">Element 2</p>
+    <span class="myElement">Element 3</span>
+    <p class="myElement">Element 4</p>
+
+    <script>
+     
+      const elements = document.querySelectorAll('.myElement');
+
+   
+      console.log(elements);
+
+      // Loop through and output each element individually
+      elements.forEach((element) => {
+        console.log(element);
+      });
+    </script>
+  </body>
+</html>

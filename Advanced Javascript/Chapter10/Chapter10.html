@@ -1,0 +1,293 @@
+<!--DOCTYPE html>
+//<html>
+
+//<body>
+    <h1>Let's find the treasure</h1>
+    <div id="forest">
+        <div id="tree1">
+            <div id="squirrel"></div>
+            <div id="flower"></div>
+        </div>
+        <div id="tree2">
+            <div id="shrubbery">
+                <div id="treasure"></div>
+            </div>
+            <div id="mushroom">
+                <div id="bug"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //console.dir(document.body);
+        //console.dir(document.body.children.forest.children.tree2.children.
+        //shrubbery.children.treasure);
+       // console.dir(document.body.childNodes[3].childNodes[3].childNodes[1].
+         //   childNodes[1]);
+        //console.dir( document.body.children.forest.children.tree2.parentElement);
+        console.dir(document.body.children.forest.children.tree2.previousElementSibling);
+    </script>
+</body>
+
+</html-->
+
+
+<!--Practice 10.1-->
+<!--doctype html>
+<html>
+
+<head>
+    <title>Practice10.1</title>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                [ 229 ]
+                <li>Three</li>
+            </ul>
+        </div>
+        <div>blue</div>
+        <div>green</div>
+        <div>yellow</div>
+        <div>Purple</div>
+    </div>
+    <script>
+        console.dir(document.body.children[0]);
+        console.dir(document.body.children[0].nextsibling);
+    </script>
+</body>
+
+</html-->
+
+<!--DOCTYPE html>
+<html>
+
+<body>
+    <h1>Welcome page</h1>
+    <p id="greeting">
+        Hi!
+    </p>
+    <script>
+      // console.dir(document.body.children.greeting);
+       //console.dir(document.body.children.greeting.innerText = "Bye!");
+       console.dir(document.body.children.greeting.innerHTML = "<p>Bye!</p>");
+    </script>
+</body>
+
+</html-->
+
+<!--DOCTYPE html>
+<html>
+
+<body>
+    <h1>Just an example</h1>
+    <div id="one" class="example">Hi!</div>
+    <div id="two" class="example">Hi!</div>
+    <div id="three" class="something">Hi!</div>
+</body>
+<script>
+    //console.log(document.getElementById("two"));
+   // console.log(document.getElementById("one"));
+   //console.log(document.getElementsByTagName("div"));
+  //console.log (document.getElementsByTagName("div").item(1));
+  console.log(document.getElementsByTagName("div").namedItem("one"));
+
+    </script>
+</html-->
+
+
+
+<!--Practice 10.3-->
+<!--DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice 10.3</title>
+</head>
+
+<body>
+    <p>Morning</p>
+    <p>Day</p>
+    <p>Night</p>
+</body>
+<script>
+const tags = document.querySelectorAll("p");
+console.log(tags[1]);
+</script>
+
+</html-->
+
+<!--Practice 10.4-->
+<!--html>
+
+<body>
+    <h1 style="color:pink;">Just an example</h1>
+    <div id="one" class="example">Hi!</div>
+    <div id="two" class="example">Hi!</div>
+    <div id="three" class="something">Hi!</div>
+</body>
+<script>
+    //console.log(document.getElementById("two"));
+  console.log(document.getElementsByClassName("example"));
+</script>
+
+</html-->
+
+<!--html>
+    <body>
+        <p class ="red">color is red</p>
+        <p class ="yellow">color is yellow</p>
+        <p class="yellow">color is yellow again</p>
+    </body>
+    <script>
+        const yellows = document.querySelectorAll(".yellow");
+        yellows.forEach(el => console.log(el));
+    </script>
+</html-->
+
+<!--Practice 10.5-->
+
+<!--DOCTYPE html>
+<html>
+  <head>
+    <title>10.4</title>
+  </head>
+  <body>
+    <div class="example">example 1.</div>
+    <p class="example">example 2.</p>
+    <p class="example">example 3</p>
+    <p class="example">example 4</p>
+
+    <script>
+    
+      const firstElement = document.querySelector(".example");
+      console.log(firstElement);
+    </script>
+  </body>
+</html-->
+
+<!--Practice 10.6-->
+
+<!--DOCTYPE html>
+<html>
+
+<head>
+    <title>10.4</title>
+</head>
+
+<body>
+    <div class="example">example 1.</div>
+    <p class="example">example 2.</p>
+    <p class="example">example 3</p>
+    <p class="example">example 4</p>
+
+    <script>
+
+        const allElements = document.querySelectorAll(".example");
+
+        console.log(Array.from(allElements));
+
+
+        allElements.forEach((element) => console.log(element));
+    </script>
+</body>
+
+</html-->
+
+<!--DOCTYPE html>
+<html>
+<body>
+<div id="one" onclick="alert('Ouch! Stop it!')">Don't click here!
+</div>
+
+</body>
+</html-->
+
+<!--DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function reveal(el) {
+            console.log(el);
+        }
+    </script>
+    <button onclick="reveal(this)">Click here!</button>
+    
+</body>
+
+</html-->
+
+<!--Practice 10.7-->
+
+<!--DOCTYPE html>
+<html>
+
+<head>
+    <title>Button Example</title>
+</head>
+
+<body>
+    <button onclick="message(this)">Hello!</button>
+    <button onclick="message(this)">Bye!</button>
+    <script>
+        function message(el) {
+            console.dir(el);
+        }
+    </script>
+</body>
+
+</html-->
+
+<!--DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function toggleDisplay() {
+            let p = document.getElementById("magic");
+            if (p.style.display === "none") {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+    </script>
+    <p id="magic">I might disappear and appear.</p>
+    <button onclick="toggleDisplay()">Magic!</button>
+</body>
+
+</html-->
+
+<!--DOCTYPE html>
+<html>
+<body>
+<script>
+function rainbowify(){
+let divs = document.getElementsByTagName("div");
+for(let i = 0; i < divs.length; i++) {
+divs[i].style.backgroundColor = divs[i].id;
+}
+}
+</script>
+<style>
+div {
+height: 30px;
+width: 30px;
+background-color: white;
+}
+</style>
+
+<div id="red"></div>
+<div id="orange"></div>
+<div id="yellow"></div>
+<div id="green"></div>
+<div id="blue"></div>
+<div id="indigo"></div>
+<div id="violet"></div>
+<button onclick="rainbowify()">Make me a rainbow</button>
+</body>
+</html-->
