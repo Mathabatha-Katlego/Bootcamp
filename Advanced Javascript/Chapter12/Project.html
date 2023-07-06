@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>Complete JavaScript Course</title>
+</head>
+<body>
+<textarea name="txtarea" id="textarea1" rows=2 cols=50></textarea> <button id="getEmailsButton">Get Emails</button>
+<textarea name="txtarea2" id="textarea2" rows=2 cols=50></textarea>
+<script>
+  
+  var getEmailsButton = document.getElementById("getEmailsButton");
+  var textarea1 = document.getElementById("textarea1");
+  var textarea2 = document.getElementById("textarea2");
+
+
+  getEmailsButton.addEventListener("click", extractEmails);
+
+  
+  function extractEmails() {
+    var content = textarea1.value;
+
+    
+    var emailsArray = content.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g);
+
+    if (emailsArray) {
+      
+      textarea2.value = emailsArray.join("\n");
+    }
+  }
+</script>
+</body>
+</html>
