@@ -28,7 +28,7 @@ myQuery.exec((error, data) => {
   if (data) console.log(data.name);
 });
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 200);
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));

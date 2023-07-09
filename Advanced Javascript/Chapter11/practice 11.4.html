@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>11.4</title>
+  <style>
+    .my-element {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="my-element"></div>
+
+  <script>
+    var element = document.querySelector('.my-element');
+    element.textContent = 'Hello World';
+
+    element.style.width = '200px';
+    element.style.height = '200px';
+    element.style.backgroundColor = 'yellow';
+
+    function handleEvent(color, event) {
+      console.log('Color:', color);
+      console.log('Event Type:', event.type);
+    }
+
+    element.addEventListener('mousedown', function (event) {
+      element.style.backgroundColor = 'green';
+      handleEvent('green', event);
+    });
+
+    element.addEventListener('mouseover', function (event) {
+      element.style.backgroundColor = 'red';
+      handleEvent('red', event);
+    });
+
+    element.addEventListener('mouseout', function (event) {
+      element.style.backgroundColor = 'yellow';
+      handleEvent('yellow', event);
+    });
+
+    element.addEventListener('mouseup', function (event) {
+      element.style.backgroundColor = 'blue';
+      handleEvent('blue', event);
+    });
+  </script>
+</body>
+
+</html>

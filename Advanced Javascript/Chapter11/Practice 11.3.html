@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>11.3</title>
+    <script>
+        function message(msg, event) {
+            console.log(event, msg);
+        }
+
+        window.onload = function (event) {
+            message('Window Ready', event);
+        };
+
+        document.addEventListener('DOMContentLoaded', function (event) {
+            message('Document Ready', event);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Event Loading Order</h1>
+</body>
+
+</html>

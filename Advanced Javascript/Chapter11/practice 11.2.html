@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>11.2
+
+    </title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .color-div {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color Divs</h1>
+    <div class="color-div" id="redDiv">Red</div>
+    <div class="color-div" id="greenDiv">Green</div>
+    <div class="color-div" id="blueDiv">Blue</div>
+
+    <script>
+        var redDiv = document.getElementById('redDiv');
+        var greenDiv = document.getElementById('greenDiv');
+        var blueDiv = document.getElementById('blueDiv');
+        var bodyElement = document.body;
+
+        redDiv.addEventListener('click', function () {
+            bodyElement.style.backgroundColor = 'red';
+        });
+
+        greenDiv.addEventListener('click', function () {
+            bodyElement.style.backgroundColor = 'green';
+        });
+
+        blueDiv.addEventListener('click', function () {
+            bodyElement.style.backgroundColor = 'blue';
+        });
+    </script>
+</body>
+
+</html>

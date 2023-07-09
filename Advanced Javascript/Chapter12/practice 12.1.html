@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>12.1</title>
+</head>
+
+<body>
+    <div id="output">12.1</div>
+    Search for:
+    <input id="sText" type="text">
+    <br> Replace with:
+    <input id="rText" type="text">
+    <br>
+    <button id="replaceButton">Replace</button>
+    <script>
+        var outputElement = document.getElementById('output');
+        var searchInput = document.getElementById('sText');
+        var replaceInput = document.getElementById('rText');
+        var replaceButton = document.getElementById('replaceButton');
+
+        replaceButton.addEventListener('click', lookup);
+
+        function lookup() {
+            var s = outputElement.textContent;
+            var rt = searchInput.value;
+
+            var regex = new RegExp(rt, 'gi');
+            var matches = s.match(regex);
+
+            if (matches) {
+                var updatedText = s.replace(regex, replaceInput.value);
+                outputElement.textContent = updatedText;
+            }
+        }
+    </script>
+</body>
+
+</html>

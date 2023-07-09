@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>12.2</title>
+</head>
+
+<body>
+    <div class="output"></div>
+    <input id="emailInput" type="text" placeholder="Enter Email">
+    <button id="checkButton">Check</button>
+    <script>
+        var outputElement = document.querySelector('.output');
+        var emailInput = document.getElementById('emailInput');
+        var checkButton = document.getElementById('checkButton');
+
+        checkButton.addEventListener('click', function () {
+            var email = emailInput.value;
+            var response = '';
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                response = 'Invalid Email';
+                outputElement.style.color = 'red';
+            } else {
+                response = 'Valid Email';
+                outputElement.style.color = 'green';
+            }
+
+            outputElement.textContent = response;
+        });
+    </script>
+</body>
+
+</html>

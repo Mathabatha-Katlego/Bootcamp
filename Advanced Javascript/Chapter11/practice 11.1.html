@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Theme Toggle</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Theme Toggle</h1>
+  <button id="toggleButton">Toggle Theme</button>
+
+  <script>
+    var darkMode = false;
+
+    function toggleTheme() {
+      var bodyElement = document.body;
+
+      if (darkMode) {
+        bodyElement.classList.remove('dark-mode');
+        darkMode = false;
+        console.log('Switched to regular mode');
+      } else {
+        bodyElement.classList.add('dark-mode');
+        darkMode = true;
+        console.log('Switched to dark mode');
+      }
+    }
+
+    var toggleButton = document.getElementById('toggleButton');
+    toggleButton.addEventListener('click', toggleTheme);
+  </script>
+</body>
+</html>
