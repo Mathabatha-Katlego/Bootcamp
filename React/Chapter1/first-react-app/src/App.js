@@ -4,7 +4,7 @@ class App extends Component {
     return (
       <div>
         <h1>
-          My Second React App!
+          My First React App!
         </h1>
       </div>
     );
