@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import UserForm from './UserForm';
+//import UserForm from './UserForm';
+import GitHub from './GitHub';
 
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
 
     return (
       <div>
-       <UserForm />
+       <GitHub />
       </div>
     );
   }
